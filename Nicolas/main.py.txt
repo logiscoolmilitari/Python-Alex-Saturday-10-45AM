@@ -1,0 +1,44 @@
+# °F = (9/5 × °C) + 32;  (°C) = (Temperature in degrees Fahrenheit (°F) - 32) * 5/9
+#K = (F − 32) × 5 ⁄ 9 + 273.15; Kelvin = Celsius + 273.15
+degrees = 0
+binary = []
+next = False
+print("Welcome to the Terminal, this has been brought to you by HABLIM ELECTRONICS™, enjoy!")
+unit = input("What unit of heat do you use? ('F' or 'C' or 'SKIP'): ")
+if unit != 'SKIP' and unit != "skip" and unit != "s" and unit != "S":
+    if unit == "F" or unit == "f":
+        Fahrenheit = int(input("You have chosen <<FAHRENHEIT>>, How hot is it outside? "))
+        print(str((Fahrenheit - 32)*5/9) + str(" °C"))
+        print("WADABOUT U USE SOME CELSIUS YOU FLTHY 'MERICAN!")
+        KelvinFahrenheit = (Fahrenheit - 32) * 5 / 9 + 273.15
+        print("Oh yeah and there's also Kelvin: " + str(KelvinFahrenheit))
+        next = True
+    else:
+        if unit == "C" or unit == "c":
+            Celsius = int(input("You have chose <<CELSIUS>>, How hot is it outside? "))
+            print(str((9/5 * Celsius) + 32) + str(" °F"))
+            print("YEEHAW BROTHA', HAVE SOME TASTE OF 'MERICA!")
+            KelvinCelsius = Celsius + 273.15
+            print("Oh yeah and there's also Kelvin: " + str(KelvinCelsius))
+            next = True
+        else:
+            print("my man that doesn't work")
+            next = True
+elif unit == "SKIP" or unit == "skip" or unit == "s" or unit == "S":
+#Here are the steps for converting decimal numbers into binary:
+# Step 1: Divide the given decimal number by 2 and note down the remainder and quotient.
+# Step 2: Now, divide the quotient obtained in step 1 by 2, and note down the remainder again.
+# Step 3: Repeat the above steps until you get 0 as the quotient.
+
+    Number =  int(input("Give the Terminal a [NUMBER] to turn into binary! "))
+    while Number > 0:
+        binary.append(str(Number % 2))
+        Number //= 2
+
+    binary.reverse()
+    bin = "".join(binary)
+    print(bin)
+
+
+#    else:
+#        print("my man that doesn't work")

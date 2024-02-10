@@ -1,0 +1,37 @@
+running = True
+while running:
+    types=input("Coverter type:")
+    if types == "km":
+        value = float(input("The value: "))
+        unit = input("The unit: ")
+        if unit == "km":
+            print(str(value) + "km in m:" + str(value / 1000))
+
+        elif unit == "m":
+            print(str(value) + "km in m:" + str(value * 1000))
+        else:
+            print("Not a real unit!")
+    elif types=="m3":
+        value=float(input("The value: "))
+        unit=input("The unit: ")
+        if unit=="m3":
+            print(str(value) + "m3 in km3:" + str(value * 1000000000))
+
+        elif unit == "km3":
+            print(str(value) + " m3 in km3:" + str(round((value / 100000), 4)))
+        else:
+            print("Not a real unit!")
+    elif types=="m2":
+        value=float(input("The value: "))
+        unit=input("The unit: ")
+        if unit=="km2":
+            print(str(value) + " m2 in km2: " + str(value * 1000000))
+
+    elif unit == "km2":
+        print(str(value) + "m2 in km2:" + str(value / 1000000))
+    else:
+        print("Not a real unit!")
+
+    question = input("Vrei o alta transformare?[DA / NU]")
+    if question == "NU":
+        running = False

@@ -1,0 +1,119 @@
+intrebare = True
+while intrebare:
+    forma = input("Alege o forma geometrica pentru a ii afla aria: ")
+
+    if forma.lower() == "triunghi":
+        baza_triunghi = int(input("Care este lungimea oricarui baze a triunghiului? "))
+        inaltime_triunghi = int(input("Care este lungimea inaltimii corespunzatoare bazei triunghiului? "))
+        arie_triunghi = (baza_triunghi * inaltime_triunghi) / 2
+        print("Aria triunghiului este egala cu", int(arie_triunghi))
+        reincercare = input("Vrei sa afli aria altei forme geometrice? ")
+
+        if reincercare.lower() == "da":
+            intrebare = True
+        elif reincercare.lower() == "nu":
+            intrebare = False
+            print("pa.")
+        else:
+            print("Raspuns invalid.")
+
+    elif forma.lower() == "cerc":
+        raza = int(input("Care este lungimea razei? "))
+        arie_cerc = 3.14 * (raza * raza)
+        print("Aria cercului este egala cu", arie_cerc)
+        reincercare = input("Vrei sa afli aria altei forme geometrice? ")
+        if reincercare.lower() == "da":
+            intrebare = True
+        elif reincercare.lower() == "nu":
+            intrebare = False
+            print("pa.")
+        else:
+            print("Raspuns invalid.")
+
+    elif forma.lower() == "dreptunghi":
+        lungime_dreptunghi = int(input("Care este lungimea dreptunghiului? "))
+        latime_dreptunghi = int(input("Care este latimea dreptunghiului? "))
+        arie_dreptunghi = lungime_dreptunghi * latime_dreptunghi
+        print("Aria dreptunghiului este egala cu", int(arie_dreptunghi))
+        reincercare = input("Vrei sa afli aria altei forme geometrice? ")
+        if reincercare.lower() == "da":
+            intrebare = True
+        elif reincercare.lower() == "nu":
+            intrebare = False
+            print("pa.")
+        else:
+            print("Raspuns invalid.")
+
+    elif forma.lower() == "patrat":
+        latura_patrat = int(input("Care este lungimea laturii patratului? "))
+        arie_patrat = latura_patrat * latura_patrat
+        print("Aria patratului este egala cu", int(arie_patrat))
+        reincercare = input("Vrei sa afli aria altei forme geometrice? ")
+        if reincercare.lower() == "da":
+            intrebare = True
+        elif reincercare.lower() == "nu":
+            intrebare = False
+            print("pa.")
+        else:
+            print("Raspuns invalid.")
+
+    elif forma.lower() == "triunghi dreptunghic":
+        cateta1 = int(input("Care este lungimea catetei 1? "))
+        cateta2 = int(input("Care este lungimea catetei 2? "))
+        arie_tdreptunghic = (cateta1 * cateta2) / 2
+        print("Aria triunghiului dreptunghic este egala cu", int(arie_tdreptunghic))
+        reincercare = input("Vrei sa afli aria altei forme geometrice? ")
+        if reincercare.lower() == "da":
+            intrebare = True
+        elif reincercare.lower() == "nu":
+            intrebare = False
+            print("pa.")
+        else:
+            print("Raspuns invalid.")
+
+    elif forma.lower() == "paralelogram":
+        baza_paralelogram = int(input("Care este lungimea bazei paralelogramului? "))
+        inaltime_paralelogram = int(input("Care este lungimea inaltimii corespunzatoare bazei paralelogramului? "))
+        arie_paralelogram = baza_paralelogram * inaltime_paralelogram
+        print("Aria paralelogramului este egala cu", int(arie_paralelogram))
+        reincercare = input("Vrei sa afli aria altei forme geometrice? ")
+        if reincercare.lower() == "da":
+            intrebare = True
+        elif reincercare.lower() == "nu":
+            intrebare = False
+            print("pa.")
+        else:
+            print("Raspuns invalid.")
+
+    elif forma.lower() == "trapez":
+        baza_mare = int(input("Care este lungimea bazei mari a trapezului? "))
+        baza_mica = int(input("Care este lungimea bazei mici a trapezului? "))
+        inaltime_trapez = int(input("Care este lungimea inaltimii trapezului? "))
+        arie_trapez = ((baza_mica + baza_mare) / 2) * inaltime_trapez
+        print("Aria trapezului este egala cu", int(arie_trapez))
+        reincercare = input("Vrei sa afli aria altei forme geometrice? ")
+        if reincercare.lower() == "da":
+            intrebare = True
+        elif reincercare.lower() == "nu":
+            intrebare = False
+            print("pa.")
+        else:
+            print("Raspuns invalid.")
+
+    elif forma.lower() == "romb":
+        latura_romb = int(input("Care este lungimea unei laturi a rombului? "))
+        inaltime_romb = int(input("Care este lungimea inaltimii corespunzatoare rombului? "))
+        arie_romb = latura_romb * inaltime_romb
+        print("Aria rombului este egala cu", int(arie_romb))
+        reincercare = input("Vrei sa afli aria altei forme geometrice? ")
+        if reincercare.lower() == "da":
+            intrebare = True
+        elif reincercare.lower() == "nu":
+            intrebare = False
+            print("pa.")
+        else:
+            print("Raspuns invalid.")
+
+    else:
+        print("Nu ai introdus o forma geometrica valida. Reincearca!")
+        intrebare = True

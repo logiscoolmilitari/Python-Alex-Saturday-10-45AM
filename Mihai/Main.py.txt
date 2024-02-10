@@ -1,0 +1,39 @@
+import random
+zi = int(input("Alege un numar de la 1 la 20: "))
+GameOn = True
+incercari = 0
+numar = random.randrange(start=0, stop=40)
+if zi > 20:
+    print("de la 1 la 20!!!")
+    GameOn = False
+    incercari = 0
+if zi < 10:
+    incercari = zi
+    print('Ai '+ str(zi) +   ' incercari')
+if zi > 10 and zi < 20:
+    incercari = int(zi) - 9
+    print('Ai ' + str(zi) + '-9 incercari')
+if zi == 10:
+    incercari = zi
+    print("Ai " + str(zi) + ' incercari')
+if GameOn == True:
+    print('Incearca sa ghicesti numarul la care ma gandesc in cele ' + str(incercari) + ' incercari!')
+while GameOn == True:
+    guess = int(input("guess: "))
+    if guess < numar:
+        incercari -= 1
+        print("Numarul este mai mare. (mai ai " + str(incercari) + ' incercari)')
+
+    elif guess > numar:
+        incercari -= 1
+        print("Numarul este mai mic. (mai ai " + str(incercari) + ' incercari)')
+
+    else:
+        print("Ai ghicit numarul!")
+        GameOn = False
+    if incercari == 1 and GameOn == True:
+        print("MAI AI O INCERCARE!")
+    if incercari == 0:
+        print("Ai ramas fara incercari!")
+        GameOn = False
+
